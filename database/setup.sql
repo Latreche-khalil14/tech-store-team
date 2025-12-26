@@ -60,3 +60,52 @@ CREATE TABLE IF NOT EXISTS order_items (
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
+INSERT IGNORE INTO users (username, email, password, full_name, role)
+VALUES (
+        'admin',
+        'admin@techstore.com',
+        '$2y$10$hkhCbYyjs3hiikxCSK8.JuX50nTwUqXgxUIR5NYvKcK0sVi5A.u0W',
+        'المدير العام',
+        'admin'
+    );
+INSERT IGNORE INTO categories (name, slug)
+VALUES ('لابتوب', 'laptops'),
+    ('كمبيوتر مكتبي', 'desktops'),
+    ('شاشات', 'monitors'),
+    ('الملحقات', 'accessories');
+INSERT IGNORE INTO products (
+        name,
+        slug,
+        description,
+        price,
+        category_id,
+        stock,
+        image_url
+    )
+VALUES (
+        'Laptop Dell XPS 15',
+        'dell-xps-15',
+        'لابتوب احترافي بمعالج i7 و 16GB RAM',
+        1299.99,
+        1,
+        10,
+        'assets/images/placeholder.jpg'
+    ),
+    (
+        'Gaming PC RTX 4070',
+        'gaming-pc-rtx-4070',
+        'كمبيوتر ألعاب جبار للأداء العالي',
+        1899.00,
+        2,
+        5,
+        'assets/images/placeholder.jpg'
+    ),
+    (
+        'Monitor LG 27 4K',
+        'lg-monitor-27-4k',
+        'شاشة مذهلة بدقة 4K',
+        449.99,
+        3,
+        20,
+        'assets/images/placeholder.jpg'
+    );
