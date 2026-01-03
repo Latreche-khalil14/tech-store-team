@@ -77,22 +77,22 @@ cp config/database.php.example config/database.php
 
 ## 📸 لقطات الشاشة
 
-<div align="center">
-  <h3>الواجهة الرئيسية (Frontend)</h3>
-  <img src="frontend/assets/img/screenshots/ts1.png" width="800" alt="Home Page Hero">
-  <br>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-    <img src="frontend/assets/img/screenshots/ts2.png" width="400" alt="Features">
-    <img src="frontend/assets/img/screenshots/ts3.png" width="400" alt="Products Grid">
-    <img src="frontend/assets/img/screenshots/ts11.png" width="400" alt="Product Details">
-    <img src="frontend/assets/img/screenshots/ts12.png" width="400" alt="Cart Page">
-  </div>
+## 📸 لقطات الشاشة
 
-  <h3>لوحة التحكم (Admin Dashboard)</h3>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-    <img src="frontend/assets/img/screenshots/ts6.png" width="400" alt="Admin Stats">
-    <img src="frontend/assets/img/screenshots/ts7.png" width="400" alt="Orders Management">
-  </div>
+<div align="center">
+  <img src="frontend/assets/img/screenshots/ts1.png" width="800" alt="Screenshot 1">
+  <br><br>
+  <img src="frontend/assets/img/screenshots/ts2.png" width="400" alt="Screenshot 2">
+  <img src="frontend/assets/img/screenshots/ts3.png" width="400" alt="Screenshot 3">
+  <img src="frontend/assets/img/screenshots/ts4.png" width="400" alt="Screenshot 4">
+  <img src="frontend/assets/img/screenshots/ts5.png" width="400" alt="Screenshot 5">
+  <img src="frontend/assets/img/screenshots/ts6.png" width="400" alt="Screenshot 6">
+  <img src="frontend/assets/img/screenshots/ts7.png" width="400" alt="Screenshot 7">
+  <img src="frontend/assets/img/screenshots/ts8.png" width="400" alt="Screenshot 8">
+  <img src="frontend/assets/img/screenshots/ts9.png" width="400" alt="Screenshot 9">
+  <img src="frontend/assets/img/screenshots/ts10.png" width="400" alt="Screenshot 10">
+  <img src="frontend/assets/img/screenshots/ts11.png" width="400" alt="Screenshot 11">
+  <img src="frontend/assets/img/screenshots/ts12.png" width="400" alt="Screenshot 12">
 </div>
 
 ## 🚦 الاستخدام
