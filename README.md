@@ -66,7 +66,6 @@ cp config/database.php.example config/database.php
    - ضع المشروع في مجلد `htdocs` (XAMPP) أو `www` (WAMP)
    - افتح المتصفح على: `http://localhost/tech-store-team`
 
-
 ## 🔐 الأمان
 
 - تشفير كلمات المرور باستخدام `password_hash()`
@@ -78,7 +77,23 @@ cp config/database.php.example config/database.php
 
 ## 📸 لقطات الشاشة
 
-> سيتم إضافة لقطات الشاشة قريباً
+<div align="center">
+  <h3>الواجهة الرئيسية (Frontend)</h3>
+  <img src="frontend/assets/img/screenshots/ts1.png" width="800" alt="Home Page Hero">
+  <br>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <img src="frontend/assets/img/screenshots/ts2.png" width="400" alt="Features">
+    <img src="frontend/assets/img/screenshots/ts3.png" width="400" alt="Products Grid">
+    <img src="frontend/assets/img/screenshots/ts11.png" width="400" alt="Product Details">
+    <img src="frontend/assets/img/screenshots/ts12.png" width="400" alt="Cart Page">
+  </div>
+
+  <h3>لوحة التحكم (Admin Dashboard)</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <img src="frontend/assets/img/screenshots/ts6.png" width="400" alt="Admin Stats">
+    <img src="frontend/assets/img/screenshots/ts7.png" width="400" alt="Orders Management">
+  </div>
+</div>
 
 ## 🚦 الاستخدام
 
@@ -107,14 +122,13 @@ cp config/database.php.example config/database.php
 
 ## 👥 الفريق
 
-- **Lead Developer & Frontend:** Khalil Ibrahim [@Latreche-khalil14](https://github.com/Latreche-khalil14)
-- **Admin & Config Guide:** Bouchareb Wail Abd El Raouf 
+- **Lead Developer & Frontend:** latreche khalil [@Latreche-khalil14](https://github.com/Latreche-khalil14)
+- **Admin & Config Guide:** Bouchareb Wail Abd El Raouf
 - **Backend Developer:** mohammed belouhem
 
 ## 📚 الموارد الإضافية
 
 - [سجل التغييرات](CHANGELOG.md) - جميع التحديثات والإصدارات
-
 
 ## 📝 الترخيص
 
