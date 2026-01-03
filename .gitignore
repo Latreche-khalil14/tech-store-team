@@ -1,0 +1,90 @@
+# ============================================
+# System Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.log
+*~
+
+# ============================================
+# IDEs and Editors
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+nbproject/
+.atom/
+
+# ============================================
+# Dependencies
+# ============================================
+node_modules/
+vendor/
+bower_components/
+jspm_packages/
+
+# ============================================
+# Configuration (Sensitive)
+# ============================================
+config/database.php
+.env
+.env.local
+.env.*.local
+
+# ============================================
+# Logs and Databases
+# ============================================
+*.log
+logs/*
+!logs/.gitkeep
+*.sql
+!database/schema.sql
+*.sqlite
+*.db
+
+# ============================================
+# Local/Temporary Scripts
+# ============================================
+add_products.php
+check_structure.php
+debug_product.php
+update_images.php
+setup_db.php
+test*.php
+*.bak
+*.tmp
+*.temp
+
+# ============================================
+# OS Generated Files
+# ============================================
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# Build and Cache
+# ============================================
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# ============================================
+# Uploaded Files (Optional - comment if needed)
+# ============================================
+# uploads/
+# frontend/assets/img/uploads/
+

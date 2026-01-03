@@ -1,21 +1,270 @@
-
 #hero {
-  min-height: 90vh;
+  min-height: 100vh;
+  perspective: 2500px; /* Even deeper perspective */
+  overflow: hidden;
+  --primary-glow: rgba(var(--primary-rgb), 0.5);
 }
-.animate-blob {
-  animation: blob 7s infinite;
+
+:root {
+  --primary-rgb: 59, 130, 246; /* Blue */
+  --accent-rgb: 6, 182, 212;
 }
-@keyframes blob {
+
+.dark {
+  --primary-rgb: 239, 68, 68; /* Red */
+  --accent-rgb: 244, 63, 94;
+}
+
+/* 1. Hyper-Glow Background */
+.mouse-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      1000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(var(--primary-rgb), 0.15),
+      transparent 80%
+    ),
+    radial-gradient(
+      400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(var(--accent-rgb), 0.1),
+      transparent 60%
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 5. Typography (Legendary Scale & Animation) */
+.text-giant {
+  font-size: clamp(
+    2.5rem,
+    8.5vw,
+    9.5rem
+  ); /* Slightly reduced for better balance */
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+  .text-giant {
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+    font-size: clamp(2.5rem, 12vw, 5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .text-giant {
+    font-size: 2.2rem;
+  }
+
+  .parallax-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.char-bounce span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.char-bounce:hover span {
+  transform: translateY(-8px) rotateX(10deg);
+  color: var(--hero-primary);
+  text-shadow: 0 10px 30px var(--hero-glow);
+}
+
+/* 6. Dynamic Scroll Indicator */
+.scroll-mouse {
+  width: 25px;
+  height: 45px;
+  border: 2px solid var(--hero-primary);
+  border-radius: 20px;
+  position: relative;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dark #hero {
+    padding-top: 150px !important;
+    align-items: flex-start !important;
+  }
+
+  .hud-corner {
+    display: none; /* Hide HUD on small mobile for cleaner look */
+  }
+
+  .tech-float {
+    display: none;
+  }
+}
+
+/* 2. Cyber HUD Overlays */
+.hud-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(var(--primary-rgb), 0.3);
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+
+.hud-tl {
+  top: 40px;
+  left: 40px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.hud-tr {
+  top: 40px;
+  right: 40px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+.hud-bl {
+  bottom: 40px;
+  left: 40px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+}
+.hud-br {
+  bottom: 40px;
+  right: 40px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+#hero:hover .hud-corner {
+  width: 60px;
+  height: 60px;
+  border-color: rgba(var(--primary-rgb), 0.8);
+}
+
+/* 3. Infinite Grid with Depth */
+.hero-grid {
+  position: absolute;
+  inset: -100% 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(var(--primary-rgb), 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(var(--primary-rgb), 0.1) 1px,
+      transparent 1px
+    );
+  background-size: 100px 100px;
+  mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 90%);
+  transform: rotateX(75deg) translateY(-200px) translateZ(-200px);
+  animation: grid-travel 60s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes grid-travel {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 1000px;
+  }
+}
+
+/* 4. Magnetic Power Buttons */
+.magnetic-btn {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 5. Glitch Text Mask */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.glitch-text:hover::before {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #0ff; /* Light blue glitch */
+}
+
+.dark .glitch-text:hover::before {
+  color: #f00;
+}
+
+@keyframes glitch {
   0% {
-    transform: scale(1);
+    transform: translate(0);
   }
-  33% {
-    transform: scale(1.1);
+  20% {
+    transform: translate(-3px, 3px);
   }
-  66% {
-    transform: scale(0.9);
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
   }
   100% {
-    transform: scale(1);
+    transform: translate(0);
   }
+}
+
+/* 6. Floating Parts (CPU/GPU Simulation) */
+.tech-float {
+  filter: drop-shadow(0 0 20px rgba(var(--primary-rgb), 0.2));
+  animation: float-3d 10s ease-in-out infinite;
+}
+
+@keyframes float-3d {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+  33% {
+    transform: translateY(-30px) rotateX(10deg) rotateY(10deg);
+  }
+  66% {
+    transform: translateY(10px) rotateX(-10deg) rotateY(-10deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-float {
+    display: none;
+  }
+}
+
+/* 7. Scanline with Noise */
+.cyber-noise {
+  position: absolute;
+  inset: 0;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 10;
 }

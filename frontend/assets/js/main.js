@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   // 1. Initialize Safety Parser
   function safeParse(key) {
@@ -19,6 +18,7 @@ $(document).ready(function () {
   if (typeof checkAuth === "function") checkAuth(user);
   if (typeof updateCartIcon === "function") updateCartIcon();
   if (typeof setupMobileMenu === "function") setupMobileMenu();
+  if (typeof setupThemeToggle === "function") setupThemeToggle();
 
   // 3. Page Specific Logic
   if (
