@@ -16,10 +16,19 @@ function addToCart(productId, productName) {
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartIcon();
 
+  // Dispatch custom event for same-page updates (e.g., if user is on cart.php)
+  window.dispatchEvent(new Event("cartUpdated"));
+
   if (typeof Swal !== "undefined") {
+    const title = window.t ? window.t("swal_added") : "Added!";
+    const productLabel =
+      productName || (window.t ? window.t("common_product") : "product");
+    let msg = window.t ? window.t("swal_added_msg") : "${name} added to cart";
+    msg = msg.replace("${name}", productLabel);
+
     Swal.fire({
-      title: "تمت الإضافة!",
-      text: `تمت إضافة ${productName || "المنتج"} إلى سلة التسوق`,
+      title: title,
+      text: msg,
       icon: "success",
       toast: true,
       position: "top-end",
