@@ -79,4 +79,3 @@ try {
 } catch (Exception $e) {
     jsonResponse(false, 'حدث خطأ غير متوقع', null, 500);
 }
-

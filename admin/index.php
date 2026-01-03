@@ -50,7 +50,7 @@ protectAdminSecret();
                 <div id="stat-users" class="text-3xl font-black mt-1 text-slate-800">0</div>
             </div>
         </div>
-         <!-- Latest Orders Table -->
+        <!-- Latest Orders Table -->
         <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
             <div class="p-8 border-b border-slate-50 flex justify-between items-center">
                 <h2 class="text-xl font-black text-slate-800">آخر العمليات</h2>
@@ -123,7 +123,7 @@ protectAdminSecret();
             }
         });
     });
-     function viewOrderDetails(orderId) {
+    function viewOrderDetails(orderId) {
         $.get(`../api/orders/get_details.php?id=${orderId}`, function (res) {
             if (res.success) {
                 const order = res.data.order;

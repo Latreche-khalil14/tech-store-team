@@ -1,0 +1,452 @@
+/* ============================================
+   DARK MODE - Enhanced Readability & Contrast
+   ============================================ */
+
+.dark {
+  color-scheme: dark;
+  /* Softer, more readable dark backgrounds */
+  --color-bg-main: #0f172a; /* slate-900 - Not pure black */
+  --color-bg-card: #1e293b; /* slate-800 - Better contrast */
+  --color-bg-elevated: #334155; /* slate-700 - For hover states */
+
+  /* Primary colors - Red for dark mode as requested */
+  --color-primary: #ef4444; /* Red-500 */
+  --color-primary-hover: #dc2626; /* Red-600 */
+  --color-primary-light: #fee2e2; /* Red-100 */
+  /* Smooth Transitions Global */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Apply smooth transition to all interactive elements in dark mode */
+.dark a, 
+.dark button, 
+.dark div, 
+.dark section, 
+.dark h1, 
+.dark h2, 
+.dark h3, 
+.dark h4, 
+.dark h5, 
+.dark h6, 
+.dark p, 
+.dark span, 
+.dark svg, 
+.dark img,
+.dark input {
+    transition: background-color 0.4s ease, 
+                color 0.4s ease, 
+                border-color 0.4s ease, 
+                filter 0.4s ease, 
+                box-shadow 0.4s ease, 
+                transform 0.4s ease,
+                opacity 0.4s ease !important;
+}
+
+
+/* Specificity Boost - Overriding Tailwind CDN styles */
+html.dark body .text-primary,
+html.dark body .dark\:text-primary {
+  color: var(--color-primary) !important;
+}
+
+html.dark body .bg-primary,
+html.dark body .dark\:bg-primary,
+html.dark body .bg-blue-600,
+html.dark body .dark\:bg-blue-600 {
+  background-color: var(--color-primary) !important;
+}
+
+html.dark body .border-primary,
+html.dark body .dark\:border-primary,
+html.dark body .hover\:border-primary:hover,
+html.dark body .dark\:hover\:border-primary:hover {
+  border-color: var(--color-primary) !important;
+}
+
+  /* Text colors - High contrast for readability */
+  --color-text-primary: #f1f5f9; /* slate-100 - Very readable */
+  --color-text-secondary: #cbd5e1; /* slate-300 - Still clear */
+  --color-text-muted: #94a3b8; /* slate-400 - Muted but visible */
+
+  /* Borders */
+  --color-border: #334155; /* slate-700 */
+  --color-border-light: #475569; /* slate-600 */
+}
+
+.dark body {
+  background-color: var(--color-bg-main) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* ============================================
+   Backgrounds - Layered approach
+   ============================================ */
+
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-background {
+  background-color: var(--color-bg-main) !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: var(--color-bg-card) !important;
+}
+
+/* Card backgrounds */
+.dark .bg-white {
+  background-color: var(--color-bg-card) !important;
+}
+
+/* Elevated surfaces (hover states) for all card-like elements */
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-100:hover,
+.dark .hover\:bg-white:hover,
+.dark .bg-white:hover,
+.dark .bg-slate-800:hover {
+  background-color: var(--color-bg-elevated) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Ensure child titles follow the color change */
+.dark .group:hover .text-slate-800,
+.dark .group:hover h3,
+.dark .group:hover .text-dark {
+  color: var(--color-primary) !important;
+}
+
+
+/* ============================================
+   Glassmorphism - Improved blur
+   ============================================ */
+
+.dark .navbar-glass {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dark .glass {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* ============================================
+   Text Colors - High Contrast
+   ============================================ */
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-dark {
+  color: var(--color-text-primary) !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: var(--color-text-secondary) !important;
+}
+
+.dark .text-slate-400 {
+  color: var(--color-text-muted) !important;
+}
+
+/* Keep slate-300 and lighter colors as-is (they're already light) */
+
+/* ============================================
+   Primary/Accent Colors
+   ============================================ */
+
+.dark .group-hover\:text-primary:hover {
+  color: var(--color-primary) !important;
+}
+
+.dark .hover\:bg-primary:hover,
+.dark .dark\:hover\:bg-primary:hover,
+.dark .group:hover .group-hover\:bg-primary,
+.dark .group:hover .group-hover\:bg-secondary,
+.dark .group:hover .group-hover\:bg-accent {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+.dark .group:hover .group-hover\:text-white {
+  color: white !important;
+}
+
+/* Fix Partner Logos in Dark Mode - White-Gray Aesthetic */
+.dark .grayscale img,
+.dark img[alt="Samsung"],
+.dark img[alt="NVIDIA"],
+.dark img[alt="Intel"],
+.dark img[alt="ASUS"],
+.dark img[alt="Razer"] {
+    filter: grayscale(1) invert(1) brightness(0.5) !important;
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.dark .grayscale:hover img,
+.dark img[alt="Samsung"]:hover,
+.dark img[alt="NVIDIA"]:hover,
+.dark img[alt="Intel"]:hover,
+.dark img[alt="ASUS"]:hover,
+.dark img[alt="Razer"]:hover {
+    filter: grayscale(1) invert(1) brightness(1.2) !important;
+    opacity: 1;
+}
+
+
+html.dark body .bg-primary\/10,
+html.dark body .dark\:bg-primary\/10 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+html.dark body .bg-primary\/20,
+html.dark body .dark\:bg-primary\/20 {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+html.dark body .bg-primary\/5,
+html.dark body .dark\:bg-primary\/5 {
+  background-color: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Navbar Link Overrides */
+html.dark body .nav-link::after {
+  background: linear-gradient(90deg, #ef4444, #f43f5e) !important;
+}
+
+html.dark body .nav-link.active {
+  color: var(--color-primary) !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border-color: var(--color-primary) !important;
+}
+
+html.dark body .nav-link:hover,
+html.dark body .nav-link:hover svg,
+html.dark body .nav-link:hover span,
+html.dark body .group:hover .group-hover\:text-primary,
+html.dark body .dark\:hover\:text-primary:hover {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+html.dark body .hover\:bg-primary\/10:hover,
+html.dark body .dark\:hover\:bg-primary\/10:hover {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* ============================================
+   Gradients
+   ============================================ */
+
+html.dark body .from-primary,
+html.dark body .dark\:from-primary {
+  --tw-gradient-from: var(--color-primary) !important;
+  --tw-gradient-to: rgba(239, 68, 68, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.dark .via-indigo-600,
+.dark .via-indigo-500 {
+  --tw-gradient-stops: var(--tw-gradient-from, transparent),
+    var(--color-primary), var(--tw-gradient-to, transparent) !important;
+}
+
+html.dark body .via-primary,
+html.dark body .dark\:via-primary {
+  --tw-gradient-stops: var(--tw-gradient-from), var(--color-primary),
+    var(--tw-gradient-to) !important;
+}
+
+html.dark body .to-primary,
+html.dark body .dark\:to-primary {
+  --tw-gradient-to: var(--color-primary-hover) !important;
+}
+
+.dark .to-indigo-600,
+.dark .to-indigo-500 {
+  --tw-gradient-to: #dc2626 !important; /* red-600 */
+}
+
+html.dark body .to-slate-800,
+html.dark body .dark\:to-slate-800,
+html.dark body .to-slate-300,
+html.dark body .dark\:to-slate-300 {
+  --tw-gradient-to: #7f1d1d !important; /* Dark Red to remove blue-gray */
+}
+
+html.dark body .to-accent {
+  --tw-gradient-to: var(--color-accent) !important;
+}
+
+/* ============================================
+   Buttons - Enhanced visibility
+   ============================================ */
+
+html.dark body button.bg-primary,
+html.dark body a.bg-primary,
+html.dark body .bg-gradient-to-r.from-primary,
+html.dark body .bg-gradient-to-r.dark\:from-primary {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-primary-hover)
+  ) !important;
+  color: white !important;
+}
+
+.dark button:hover,
+.dark .btn:hover {
+  box-shadow: none !important;
+}
+
+/* Pulse Animation for Login Button */
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.dark .btn-pulse {
+  animation: pulse-red 2s infinite;
+}
+
+.dark .text-slate-500 {
+  color: var(--color-text-secondary) !important;
+}
+
+
+/* ============================================
+   Borders - Subtle but visible
+   ============================================ */
+
+.dark .border,
+.dark .border-slate-100,
+.dark .border-slate-200 {
+  border-color: var(--color-border) !important;
+}
+
+.dark .border-slate-300 {
+  border-color: var(--color-border-light) !important;
+}
+
+/* ============================================
+   Form Inputs - Clear and readable
+   ============================================ */
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: var(--color-bg-card) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--color-text-muted) !important;
+  opacity: 0.7;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-bg-elevated) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* ============================================
+   Secondary & Accent Colors
+   ============================================ */
+
+.dark .bg-secondary,
+.dark .text-secondary {
+  color: #f472b6 !important; /* Pink - visible in dark mode */
+}
+
+.dark .bg-secondary\/10 {
+  background-color: rgba(244, 114, 182, 0.1) !important;
+}
+
+.dark .bg-accent,
+.dark .text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* Footer & Link Contrast */
+.dark footer a.text-slate-500 {
+  color: var(--color-text-secondary) !important;
+}
+
+.dark footer a.text-slate-500:hover {
+  color: var(--color-primary) !important;
+}
+
+.dark .social-icon {
+  background-color: var(--color-bg-card) !important;
+  color: var(--color-text-muted) !important;
+}
+
+.dark .social-icon:hover {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+/* ============================================
+   Shadows - Softer in dark mode
+   ============================================ */
+
+.dark .shadow-soft,
+.dark .shadow-lg,
+.dark .shadow-xl {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ============================================
+   Special Elements
+   ============================================ */
+
+/* Mix blend mode for decorative blobs */
+.dark .mix-blend-multiply {
+  mix-blend-mode: screen !important;
+  opacity: 0.3;
+}
+
+/* Scrollbar */
+.dark ::-webkit-scrollbar {
+  width: 12px;
+  background: var(--color-bg-main);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 6px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ============================================
+   Dark Mode Hero Responsive Fixes
+   ============================================ */
+@media (max-width: 768px) {
+    .dark #hero {
+        padding-top: 140px !important;
+        align-items: flex-start !important;
+    }
+    
+    .dark #hero .container {
+        padding-top: 2rem;
+    }
+}

@@ -285,7 +285,8 @@ function logError($message, $file = 'error.log')
 {
     $timestamp = date('Y-m-d H:i:s');
     $logMessage = "[$timestamp] $message" . PHP_EOL;
-    error_log($logMessage, 3, __DIR__ . '/../logs/' . $file);
+    // Note: This assumes a 'logs' directory exists in the project root
+    @error_log($logMessage, 3, __DIR__ . '/../logs/' . $file);
 }
 
 /**
