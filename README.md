@@ -12,11 +12,17 @@
 
 **Modern Arabic E-commerce Platform with Dark Mode Support**
 
-### 🌐 [مشاهدة العرض المباشر | Live Preview](http://storeoftech.infinityfreeapp.com)
+<div align="center">
+
+### 🚀 [مشاهدة العرض المباشر | LIVE DEMO](http://storeoftech.infinityfreeapp.com)
+
+[![Live Preview](https://img.shields.io/badge/DEMO-CLICK_HERE_TO_VISIT_STORE-FF5733?style=for-the-badge&logo=rocket&logoColor=white)](http://storeoftech.infinityfreeapp.com)
+
+**✨ جرب النظام الآن عبر الرابط أعلاه ✨**
+
+</div>
 
 ---
-
-[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-Visit_Store-blue?style=for-the-badge&logo=livewire&logoColor=white)](http://storeoftech.infinityfreeapp.com)
 
 [المميزات](#-المميزات) • [التثبيت](#️-التثبيت) • [الاستخدام](#-الاستخدام) • [المساهمة](#-المساهمة) • [الترخيص](#-الترخيص)
 
