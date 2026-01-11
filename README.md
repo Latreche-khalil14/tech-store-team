@@ -66,7 +66,6 @@ cp config/database.php.example config/database.php
    - ضع المشروع في مجلد `htdocs` (XAMPP) أو `www` (WAMP)
    - افتح المتصفح على: `http://localhost/tech-store-team`
 
-
 ## 🔐 الأمان
 
 - تشفير كلمات المرور باستخدام `password_hash()`
@@ -78,7 +77,23 @@ cp config/database.php.example config/database.php
 
 ## 📸 لقطات الشاشة
 
-> سيتم إضافة لقطات الشاشة قريباً
+## 📸 لقطات الشاشة
+
+<div align="center">
+  <img src="frontend/assets/img/screenshots/ts1.png" width="800" alt="Screenshot 1">
+  <br><br>
+  <img src="frontend/assets/img/screenshots/ts2.png" width="400" alt="Screenshot 2">
+  <img src="frontend/assets/img/screenshots/ts3.png" width="400" alt="Screenshot 3">
+  <img src="frontend/assets/img/screenshots/ts4.png" width="400" alt="Screenshot 4">
+  <img src="frontend/assets/img/screenshots/ts5.png" width="400" alt="Screenshot 5">
+  <img src="frontend/assets/img/screenshots/ts6.png" width="400" alt="Screenshot 6">
+  <img src="frontend/assets/img/screenshots/ts7.png" width="400" alt="Screenshot 7">
+  <img src="frontend/assets/img/screenshots/ts8.png" width="400" alt="Screenshot 8">
+  <img src="frontend/assets/img/screenshots/ts9.png" width="400" alt="Screenshot 9">
+  <img src="frontend/assets/img/screenshots/ts10.png" width="400" alt="Screenshot 10">
+  <img src="frontend/assets/img/screenshots/ts11.png" width="400" alt="Screenshot 11">
+  <img src="frontend/assets/img/screenshots/ts12.png" width="400" alt="Screenshot 12">
+</div>
 
 ## 🚦 الاستخدام
 
@@ -107,14 +122,14 @@ cp config/database.php.example config/database.php
 
 ## 👥 الفريق
 
-- **Lead Developer & Frontend:** Khalil Ibrahim [@Latreche-khalil14](https://github.com/Latreche-khalil14)
-- **Admin & Config Guide:** Bouchareb Wail Abd El Raouf 
+- **Lead Developer & Frontend:** latreche khalil [@Latreche-khalil14](https://github.com/Latreche-khalil14)
+- **Admin & Config Guide:** Bouchareb Wail Abd El Raouf
 - **Backend Developer:** mohammed belouhem
+- **Rapport PDF, Diagrams, Deployment & Presentation Video:** belhay mohammed fadi
 
 ## 📚 الموارد الإضافية
 
 - [سجل التغييرات](CHANGELOG.md) - جميع التحديثات والإصدارات
-
 
 ## 📝 الترخيص
 
