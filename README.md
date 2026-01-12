@@ -136,8 +136,9 @@ cp config/database.php.example config/database.php
 
 - **Lead Developer & Frontend:** latreche khalil [@Latreche-khalil14](https://github.com/Latreche-khalil14)
 - **Admin & Config Guide:** Bouchareb Wail Abd El Raouf
-- **Backend Developer:** mohammed belouhem
-- **Rapport PDF, Diagrams, Deployment & Presentation Video:** belhay mohammed fadi
+- **Backend Developer:** 
+Mohamed Belouahem
+- **Rapport PDF, Diagrams, Deployment & Presentation Video:** Belhay Mohammed Fadi
 
 ## 📚 الموارد الإضافية
 
